@@ -1,58 +1,33 @@
 import java.io.*;
 
-/**
- * 계산기 클래스
- */
+
 public class Calculator {
 
-  /**더하기 메서드
-   * @param result
-   * @param num2
-   * @return float 더해준 결과값
-   */
+
   public static float plus(float result, float num2) {
     return result+num2;
   }
 
-  /**마이너스 메서드
-   * @param result
-   * @param num2
-   * @return float 빼준 결과값
-   */
+
   public static float minus(float result, float num2) {
     return result-num2;
   }
 
-  /**나누기 메서드
-   * @param result
-   * @param num2
-   * @return float 나눈 결과값
-   */
+
   public static float divide(float result, float num2) {
     return result/num2;
   }
 
-  /**곱하기 메서드
-   * @param result
-   * @param num2
-   * @return float 곱해준 결과값
-   */
+
   public static float Multi(float result, float num2) {
     return result*num2;
   }
 
-  /**나머지 구하기 메서드
-   * @param result
-   * @param num2
-   * @return float 나머지값
-   */
+
   public static float remainder(float result, float num2) {
     return result%num2;
   }
 
-  /**main 메서드
-   * @param args
-   */
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     float num1;
@@ -69,13 +44,13 @@ public class Calculator {
       if(flag != 2){
         flag =0;
         System.out.print("숫자를 입력해주세요:");
-        result= Float.parseFloat(br.readLine()); // 계산할 첫 숫자 받아오기
+        result= Float.parseFloat(br.readLine());
       }
       num1 = result;
       System.out.print("수학 기호를 입력해주세요(+,-,*,/,%만 가능)");
       symbol = br.readLine().trim();
       System.out.print("숫자를 입력해주세요:");
-      num2 = Float.parseFloat(br.readLine()); // 계산할 두번째 숫자 받아오기
+      num2 = Float.parseFloat(br.readLine());
       switch (symbol){
         case "+":
           result = plus(result,num2);
